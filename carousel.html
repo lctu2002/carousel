@@ -1,0 +1,130 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<!-- Demo styles -->
+<!-- Edited by youtube.com/@ruosuoasu -->
+<style>
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+:root {
+    --swiper-navigation-size: 44px;
+}
+.swiper-button-next, 
+.swiper-button-prev {
+    padding: 0.5em 1em;
+    background: white;
+    color:black;
+    opacity: 0.65;
+    border-radius:50%;
+}
+.swiper-button-next {
+    right: 20px;
+    /*display: none;*/
+}
+.swiper-button-prev {
+    left: 20px;
+    /*display: none;*/
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    display:none !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.5rem;
+}
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+    background: white;
+    width: 30px;
+    height: 10px;
+    border-radius:5px;
+}
+@media screen and (max-width:1024px) {
+    :root {
+        --swiper-navigation-size: 33px;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        padding: 0.5em 0.8em;
+    }
+}
+@media screen and (max-width:768px) {
+    :root {
+        --swiper-navigation-size: 16px;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        padding: 0.5em 0.7em;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 1rem;
+    }
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+    }
+    .swiper-pagination-bullet-active {
+        width: 20px;
+        height: 6px;
+    }
+}
+</style>
+
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="https://sites.google.com/view/carousel-practice/%E9%A6%96%E9%A0%81"><img src="https://drive.google.com/uc?id=1BYuYMYGt3n0cM2Pte2M_3b5-w042Ww67"></a></div>
+        <div class="swiper-slide"><a href="https://sites.google.com/view/carousel-practice/%E9%A6%96%E9%A0%81"><img src=" https://drive.google.com/uc?id=1gvK158D8oGOMTVSmieDYPswROqLzE1Bz"></a></div>
+        <div class="swiper-slide"><a href="https://sites.google.com/view/carousel-practice/%E9%A6%96%E9%A0%81"><img src=" https://drive.google.com/uc?id=169YnZGjUBd7PArByTpPb6nI2zvx5L6CT"></a></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3600,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
